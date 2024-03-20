@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPF Calculator</title>
+  <link rel="stylesheet" href="ppf.css">
+</head>
+<body>
+  <div class="container">
+    <h1>PPF Calculator</h1>
+    <div class="input-container">
+      <label for="investment">Investment Amount:</label>
+      <input type="number" id="investment" placeholder="Enter amount">
+    </div>
+    <div class="input-container">
+      <label for="rate">Annual Interest Rate (%):</label>
+      <input type="number" id="rate" placeholder="Enter rate">
+    </div>
+    <div class="input-container">
+      <label for="years">Investment Period (Years):</label>
+      <input type="number" id="years" placeholder="Enter years">
+    </div>
+    <button onclick="calculatePPF()">Calculate</button>
+    <div id="result"></div>
+  </div>
+  <script src="ppf.js"></script>
+</body>
+</html>

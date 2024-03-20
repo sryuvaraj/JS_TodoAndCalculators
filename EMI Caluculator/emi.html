@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI Calculator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style></style>
+
+    <script>
+      function calculate() {
+        let loanAmount = document.getElementById("loanAmount").value;
+        let yearlyRate = document.getElementById("yearlyRate").value;
+        let period = document.getElementById("period").value;
+
+        const lAmount = parseFloat(loanAmount)
+        const r = parseFloat(yearlyRate)
+        const lPeriod = parseFloat(period)
+        const int = parseFloat((lAmount*r*lPeriod/100))
+        const totAMount = parseFloat(int+lAmount)
+        const mEMI = parseFloat(totAMount/(lPeriod*12))
+
+        document.getElementById("1").innerHTML = mEMI;
+        document.getElementById("2").innerHTML = int;
+        document.getElementById("3").innerHTML = totAMount;
+      }
+    </script>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div style="display: flex;justify-content: center; align-items: center;height: 100vh;">
+        <div class="sipDiv" style="width: 100vh;">
+            <h2 class="tex-center text-primary">EMI Calculator</h2>
+            <div class="form-group">
+              <lable>Loan Amount</lable>
+              <input class="form-control" id="loanAmount" type="number" />
+            </div>
+            <div>
+              <lable>Rate of Interest(P.A)</lable>
+              <input class="form-control" id="yearlyRate" type="number" />
+            </div>
+            <div>
+              <lable>Loan Period</lable>
+              <input class="form-control" id="period" type="number" />
+            </div>
+            <button class="btn btn-primary my-3" onclick="calculate()">Calculate</button>
+            <div class="values mt-5">
+              <p>Monthly EMI :<span id="1"></span></p>
+              <p>Total Interest :<span id="2"></span></p>
+              <p>Total Amount:<span id="3"></span></p>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.row{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.content{
+    background-image: url("https://images.pexels.com/photos/18863265/pexels-photo-18863265/free-photo-of-car-approaching-a-dark-tunnel-in-a-forest.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 500px;
+    max-height: 500px;
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+h1{
+    color: black;
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.input{
+    display: flex;
+    justify-content:center;
+    padding-top: 20px;
+    gap: 10px;
+}
+
+#work{
+    border-radius: 5px;
+}
+
+#workList{
+    padding: 30px;
+}
+
+#addBtn{
+    padding: 0px 5px;
+    border-radius: 5px;
+    background-color: salmon;
+    font-weight: 800;
+}
+
+#listItem{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+table > tr > td{
+    padding:0px 5px;
+    font-weight: 700;
+    word-wrap: break-word;
+}

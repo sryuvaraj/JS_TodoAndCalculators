@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style></style>
+
+    <script>
+      function calculate() {
+        let w = document.getElementById("weight").value;
+        let h = document.getElementById("height").value;
+        let result = parseFloat((w/(Math.pow((h/100),2))).toFixed(2))
+        document.getElementById("1").innerHTML = w;
+        document.getElementById("2").innerHTML = h;
+        document.getElementById("3").innerHTML = result;
+      }
+    </script>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <div style="display: flex;justify-content: center; align-items: center;height: 100vh;">
+        <div class="sipDiv" style="width: 100vh;">
+            <h2 class="tex-center text-primary">BMI Calculator</h2>
+            <div class="form-group">
+              <lable>Weight (in Kgms):</lable>
+              <input class="form-control" id="weight" type="number" />
+            </div>
+            <div>
+              <lable>Height (in Cms):</lable>
+              <input class="form-control" id="height" type="number" />
+            </div>
+            <button class="btn btn-primary my-3" onclick="calculate()">Calculate</button>
+            <div class="values mt-5">
+              <p>Weight:<span id="1"></span></p>
+              <p>Height Amount :<span id="2"></span></p>
+              <p>BMI :<span id="3"></span></p>
+            </div>
+          </div>
+    </div>
+  </body>
+</html>
